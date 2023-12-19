@@ -53,6 +53,7 @@ const register = responder(async (req, res) => {
 
   return {
     message: "Your account created. Please verify your account.",
+    status: 201,
   };
 });
 
