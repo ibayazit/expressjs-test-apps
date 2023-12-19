@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  movie-app:
+    container_name: movie-app
+    build:
+      context: .
+      dockerfile: ./.docker/.dev.Dockerfile
+      target: development
+    command: npm run start:dev
+    depends_on:
+      - mongodb
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 3000:3000
+
+  mongodb:
+    container_name: movie-mongo
+    restart: always
+    image: "mongo:jammy"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb-data:/data/db
+      - mongodb-config:/data/configdb
+      - mongodb-log:/var/log/mongodb
+
+  rabbitmq:
+    container_name: movie-rabbitmq
+    image: rabbitmq:management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+networks:
+  mongodb:
+
+volumes:
+  mongodb-data:
+  mongodb-config:
+  mongodb-log:

@@ -1,0 +1,695 @@
+{
+	"info": {
+		"_postman_id": "361d5d2b-b55c-4412-a0b3-0bbf134b103c",
+		"name": "Movie App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11313882"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ibrbayazit@gmail.com\",\n    \"password\": \"123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"ibrahim\",\n    \"surname\": \"Bayazit\",\n    \"email\": \"ibrbayazit@gmail.com\",\n    \"password\": \"123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"ibrbayazit@gmail.com\",\n    \"code\": \"118979\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/auth/verify",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/auth/check",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"check"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/658034c8293427767f90b2be",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"658034c8293427767f90b2be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"john\",\n    \"surname\": \"Doe\",\n    \"email\": \"john@doe.com\",\n    \"password\": \"123123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"john\",\n    \"surname\": \"Doe\",\n    \"email\": \"john@doe.com\",\n    \"password\": \"1231234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/users/6580394c4d55d02a5eba15b0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"6580394c4d55d02a5eba15b0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/users/6580394c4d55d02a5eba15b0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"users",
+								"6580394c4d55d02a5eba15b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "directors",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/directors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/directors/658034c8293427767f90b2be",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"directors",
+								"658034c8293427767f90b2be"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Darren\",\n    \"surname\": \"Aronofsky\",\n    \"imdbUrl\": \"https://www.imdb.com/name/nm0004716/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/directors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"directors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Darren x\",\n    \"surname\": \"Aronofsky\",\n    \"imdbUrl\": \"https://www.imdb.com/name/nm0004716/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/directors/6580572228eda5efc9c25598",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"directors",
+								"6580572228eda5efc9c25598"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/directors/6580394c4d55d02a5eba15b0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"directors",
+								"6580394c4d55d02a5eba15b0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/categories/65803f6af84d7c7d00d0643a",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"65803f6af84d7c7d00d0643a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Sci-fi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Sci-fi horror\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/categories/65803f42f84d7c7d00d06432",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"65803f42f84d7c7d00d06432"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/categories/65803f42f84d7c7d00d06432",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"categories",
+								"65803f42f84d7c7d00d06432"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movies",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/movies?page=1&pageSize=2&search=dream",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movies"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "dream"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/movies/65804aae17b3f4c4a634fd77",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movies",
+								"65804aae17b3f4c4a634fd77"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Requiem for a dream\",\n    \"categories\": [\"65803f6af84d7c7d00d0643a\"],\n    \"imdbUrl\": \"https://www.imdb.com/title/tt0180093/\",\n    \"directorId\": \"6580572228eda5efc9c25598\",\n    \"publishAt\": \"2000-10-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Requiem for a dream\",\n    \"category_id\": \"65803f42f84d7c7d00d06432\",\n    \"imdb_url\": \"https://www.imdb.com/title/tt0180093/\",\n    \"director\": \"Darren Aronofsky\",\n    \"publishAt\": \"2000-10-27\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/movies/65803f42f84d7c7d00d06432",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movies",
+								"65803f42f84d7c7d00d06432"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/movies/658061946da0d3d07efacbca",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"movies",
+								"658061946da0d3d07efacbca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "activities",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/activities?page=1&pageSize=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"activities"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "SEARCHED",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"movieId\": \"658061946da0d3d07efacbca\",\n    \"activity\": \"WATCHED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/activities",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"activities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/activities/65808b9a84201f011d02ba53",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"activities",
+								"65808b9a84201f011d02ba53"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTgxNjA5ZDYyYTYxMDk4OTAxZTVkMWQiLCJuYW1lIjoiaWJyYWhpbSIsInN1cm5hbWUiOiJCYXlheml0IiwiZW1haWwiOiJpYnJiYXlheml0NUBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQxMCRQSjZSTkQvbWFzeU5RNkFlbGtOOXgueVYxaFJYci5TRnRYSVpySTJVT1RnYjN2TTBRbUFMcSIsInZlcmlmaWNhdGlvbkNvZGUiOm51bGwsInZlcmlmaWVkQXQiOiIyMDIzLTEyLTE5VDA5OjQxOjM3LjQ2MloiLCJkZWxldGVkQXQiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjMtMTItMTlUMDk6MjE6MzMuNzA5WiIsInVwZGF0ZWRBdCI6IjIwMjMtMTItMTlUMDk6NDE6MzcuNDYyWiIsIl9fdiI6MCwiaWF0IjoxNzAyOTc4OTEyLCJleHAiOjE3MDI5ODA3MTJ9.9thgy90aqWNj8mWPrY4tGBix6cTCeV2bJxh4Xnxgm68",
+			"type": "string"
+		}
+	]
+}

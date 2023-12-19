@@ -1,0 +1,16 @@
+{
+  "name": "express-fibonacci",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "node index",
+    "serve:dev": "node --watch index"
+  },
+  "keywords": [],
+  "author": "",
+  "description": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
